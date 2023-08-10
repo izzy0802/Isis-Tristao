@@ -22,6 +22,7 @@
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
         "GitHub.copilot",
+        "oderwat.indent-rainbow",
         "ms-vscode.azure-account",
         "ms-azuretools.vscode-azurestaticwebapps"
       ],
