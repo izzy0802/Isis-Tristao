@@ -24,8 +24,15 @@ import "./styles.css";
  * If you don't have one of the social sites listed, leave it as an empty string.
  */
 const siteProps = {
-  name: "Alexandrie Grenier",
-  title: "Web Designer & Content Creator",
+  name: "Bem vindo.",
+  title: (
+    <div>
+      Meu nome é Isis, atualmente desenvolvo soluções com as ferramentas da Microsoft!
+      <span className="ms-Icon ms-Icon--PowerAppsLogo _1CSRiMDZ6DRa3c1tIMDD3x ms-svg-Icon" style={{ display: "inline-block" }}> </span>
+      <br />
+      Estou me especializando na área de Data Science e Machine Learning.
+    </div>
+  ),
   email: "alex@example.com",
   gitHub: "microsoft",
   instagram: "microsoft",
@@ -40,7 +47,7 @@ const secondaryColor = "#D2F1E4";
 
 const App = () => {
   return (
-    <div id="main">
+    <div id="main" style={{ backgroundColor: "#1d1d20" }}>
       <Header />
       <Home name={siteProps.name} title={siteProps.title} />
       <About />
