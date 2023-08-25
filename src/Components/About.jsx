@@ -6,6 +6,16 @@
 
 import React from "react";
 
+import PowerApss from "../images/PowerApps_scalable.svg";
+import PowerAutomate from "../images/PowerAutomate_scalable.svg";
+import PowerBI from "../images/PowerBI_scalable.svg";
+import PowerVirtualAgents from "../images/PowerVirtualAgents_scalable.svg";
+import PowerPages from "../images/PowerPages_scalable.svg";
+import PowerPlataform from "../images/PowerPlatform_scalable.svg";
+import Dataverse from "../images/Dataverse_scalable.svg";
+import DataWarehouse from "../images/synapse-data-warehouse-icon.png";
+import DataLake from "../images/onelake-icon.png";
+
 /**
  * About background image
  *
@@ -22,7 +32,7 @@ import React from "react";
  */
 const description = (
   <>
-    E se não estiver listado eu aprendo <br /> incrivelmente rápido, então <br /> não se preocupe. 😉
+    E se não estiver listado eu aprendo <br /> incrivelmente rápido, então <br /> não se preocupe.😉
   </>
 );
 
@@ -36,6 +46,17 @@ const description = (
  * how you best work, or even a quote. This will help someone learn more
  * about you on a professional level.
  */
+const imageUrls = [
+  PowerApss,
+  PowerAutomate,
+  PowerBI,
+  PowerVirtualAgents,
+  PowerPages,
+  PowerPlataform,
+  Dataverse,
+  DataWarehouse,
+  DataLake,
+];
 
 const About = () => {
   return (
@@ -57,7 +78,7 @@ const About = () => {
             flexDirection: "column",
             flexGrow: 1,
             maxWidth: "45%", // Adicione um limite de largura para a coluna de texto
-            padding: "0 20px", // Adicione um espaçamento interno para alinhar o conteúdo
+            paddingRight: "20px", // Adicione um espaçamento à direita para separar a coluna de texto da matriz
           }}
         >
           <div
@@ -105,6 +126,8 @@ const About = () => {
                     width: "100px",
                     height: "100px",
                     backgroundColor: "#EAF9FA",
+                    backgroundImage: `url(${imageUrls[rowIndex * 3 + colIndex]})`,
+                    backgroundSize: "cover",
                     marginRight: "20px", // Adicione margem à direita para separar as colunas
                   }}
                 ></div>

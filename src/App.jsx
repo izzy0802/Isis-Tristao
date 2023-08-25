@@ -10,6 +10,7 @@ import About from "./Components/About";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import Home from "./Components/Home";
+import Contact from "./Components/Contact";
 import Portfolio from "./Components/Portfolio";
 
 import "./styles.css";
@@ -24,7 +25,7 @@ import "./styles.css";
  * If you don't have one of the social sites listed, leave it as an empty string.
  */
 const siteProps = {
-  name: "Bem vindo.",
+  name: "Isis Tristão Dos Santos",
   title: (
     <div
       style={{
@@ -34,8 +35,7 @@ const siteProps = {
       }}
     >
       Criando soluções
-      <br />
-      e experiências marcantes.
+      <br />e experiências marcantes.
     </div>
   ),
   email: "alex@example.com",
@@ -47,7 +47,7 @@ const siteProps = {
   youTube: "Code",
 };
 
-const primaryColor = "#4E567E";
+const primaryColor = "Black";
 const secondaryColor = "#D2F1E4";
 
 const App = () => {
@@ -57,6 +57,7 @@ const App = () => {
       <Home name={siteProps.name} title={siteProps.title} />
       <About />
       <Portfolio />
+      <Contact />
       <Footer {...siteProps} primaryColor={primaryColor} secondaryColor={secondaryColor} />
     </div>
   );

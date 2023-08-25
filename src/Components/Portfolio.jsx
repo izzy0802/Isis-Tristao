@@ -19,9 +19,6 @@ import React from "react";
  * Need an image? Check out https://unsplash.com to download a photo you
  * freely use on your site.
  */
-import image from "../images/design-desk.jpeg";
-
-const imageAltText = "desktop with books and laptop";
 
 /**
  * Project list
@@ -29,60 +26,95 @@ const imageAltText = "desktop with books and laptop";
  * An array of objects that will be used to display for your project
  * links section. Below is a sample, update to reflect links you'd like to highlight.
  */
-const projectList = [
+/*const projects = [
   {
     title: "10 Things To Know About Azure Static Web Apps 🎉",
     description:
       "Collaboration to create a beginner friendly article to help explain Azure Static Web Apps and tooling to get started.",
-    url: "https://dev.to/azure/10-things-to-know-about-azure-static-web-apps-3n4i",
+    imgURL: "",
   },
   {
     title: "Web Development for Beginners",
     description:
       "Contributed sketch note imagery to accompany each lesson. These help provide visual representation of what is being taught.",
-    url: "https://github.com/microsoft/web-dev-for-beginners",
+    imgURL: "",
   },
   {
     title: "My Resume Site",
     description:
       "Created from Microsoft's resume workshop and deployed to GitHub pages. Includes my experience and design abilities.",
-    url: "https://github.com/microsoft/workshop-library/tree/main/full/build-resume-website",
+    imgURL: "",
   },
   {
     title: "GitHub Codespaces and github.dev",
     description:
       "Video interview to explain when to use GitHub.dev versus GitHub Codespaces, and how best to use each tool.",
-    url: "https://www.youtube.com/watch?v=c3hHhRME_XI",
+    imgURL: "",
   },
 ];
-
+*/
 const Portfolio = () => {
   return (
     <section className="padding" id="portfolio">
-      <h2 style={{ textAlign: "center" }}>Portfolio</h2>
-      <div style={{ display: "flex", flexDirection: "row", paddingTop: "3rem" }}>
-        <div style={{ maxWidth: "40%", alignSelf: "center" }}>
-          <img
-            src={image}
+      <div
+        style={{
+          display: "flex",
+          backgroundColor: "white",
+          width: "37.5%",
+          margin: "3rem auto",
+          alignItems: "flex-start",
+          justifyContent: "left",
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            flexGrow: 1,
+            maxWidth: "45%",
+            paddingRight: "20px",
+          }}
+        >
+          <div
             style={{
-              height: "90%",
               width: "100%",
-              objectFit: "cover",
-              animation: "1s ease-out 0s 1 slideIn",
             }}
-            alt={imageAltText}
-          />
+          >
+            <h2 style={{ fontSize: "32px" }}>Trabalhos & Projetos</h2>
+          </div>
         </div>
-        <div className="container">
-          {projectList.map((project) => (
-            <div className="box" key={project.title}>
-              <a href={project.url} target="_blank" rel="noopener noreferrer">
-                <h3 style={{ flexBasis: "40px" }}>{project.title}</h3>
-              </a>
-              <p className="small">{project.description}</p>
-            </div>
-          ))}
-        </div>
+      </div>
+      <div className="container">
+        {[...Array(2)].map((_, rowIndex) => (
+          <div key={rowIndex} className="row">
+            {[...Array(2)].map((_, colIndex) => (
+              <div key={colIndex} className="box"></div>
+            ))}
+          </div>
+        ))}
+      </div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          textAlign: "center",
+          marginTop: "40px",
+        }}
+      >
+        <button
+          style={{
+            width: "287px",
+            height: "82px",
+            borderRadius: "40px",
+            backgroundColor: "black",
+            color: "white",
+            fontSize: "19px",
+            fontWeight: "500",
+            lineHeight: "75px",
+          }}
+        >
+          VER MAIS
+        </button>
       </div>
     </section>
   );
