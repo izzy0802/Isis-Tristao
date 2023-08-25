@@ -10,74 +10,108 @@ import React from "react";
  * About background image
  *
  * Below is a sample image. Upload the image of your choice into the "images"
- * directory and import here for use. Then, set imageAltText to string that 
+ * directory and import here for use. Then, set imageAltText to string that
  * represents what you see in that image.
  *
  * Need an image? Check out https://unsplash.com to download a image you
  * freely use on your site.
  */
-import image from "../images/motion-background.jpg";
-
-const imageAltText = "purple and blue abstract background";
 
 /**
  * Sort description that expands on your title on the Home component.
  */
-const description =
-  "I'm a UI/UX student studying at Barnett Technical University. I enjoy creating unique and simplistic user interfaces in creative ways.";
+const description = (
+  <>
+    E se não estiver listado eu aprendo <br /> incrivelmente rápido, então <br /> não se preocupe. 😉
+  </>
+);
 
 /**
  * List of some of skills or technologies you work on, are learning,
  * passionate about, or enjoy,
  */
-const skillsList = [
-  "Web design",
-  "User experience",
-  "Inclusive design",
-  "Focus group testing",
-  "Mobile user interfaces",
-  "Graphic design",
-];
 
 /**
  * Use this to give more information about what you are passionate about,
  * how you best work, or even a quote. This will help someone learn more
  * about you on a professional level.
  */
-const detailOrQuote =
-  "I am passionate about solving problems in new creative ways to drive innovation. By leveraging my UI/UX experience I continually look for new and better ways to make tech accessible by all.";
 
 const About = () => {
   return (
-    <section className="padding" id="about">
-      <img className="background" src={image} alt={imageAltText} />
+    <section id="about">
       <div
         style={{
           backgroundColor: "white",
           width: "50%",
           padding: "4rem",
           margin: "3rem auto",
-          textAlign: "center",
+          display: "flex",
+          alignItems: "flex-start",
+          justifyContent: "center",
         }}
       >
-        <h2>About Myself</h2>
-        <p className="large">{description}</p>
-        <hr />
-        <ul
+        <div
           style={{
-            textAlign: "left",
-            columns: 2,
-            fontSize: "1.25rem",
-            margin: "2rem 3rem",
-            gap: "3rem",
+            display: "flex",
+            flexDirection: "column",
+            flexGrow: 1,
+            maxWidth: "45%", // Adicione um limite de largura para a coluna de texto
+            padding: "0 20px", // Adicione um espaçamento interno para alinhar o conteúdo
           }}
         >
-          {skillsList.map((skill) => (
-            <li key={skill}>{skill}</li>
+          <div
+            style={{
+              width: "100%", // Defina a largura como 100% para o título
+            }}
+          >
+            <h2
+              style={{
+                fontSize: "32px",
+              }}
+            >
+              Habilidades & Tecnologias
+            </h2>
+          </div>
+          <p
+            style={{
+              fontSize: "20px",
+              fontWeight: "600",
+              marginTop: "20px",
+              textAlign: "initial",
+            }}
+          >
+            {description}
+          </p>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
+          {[...Array(3)].map((_, rowIndex) => (
+            <div
+              key={rowIndex}
+              style={{
+                display: "flex",
+                marginBottom: "20px", // Adicione margem inferior para separar as linhas
+              }}
+            >
+              {[...Array(3)].map((_, colIndex) => (
+                <div
+                  key={colIndex}
+                  style={{
+                    width: "100px",
+                    height: "100px",
+                    backgroundColor: "#EAF9FA",
+                    marginRight: "20px", // Adicione margem à direita para separar as colunas
+                  }}
+                ></div>
+              ))}
+            </div>
           ))}
-        </ul>
-        <hr />
-        <p style={{ padding: "1rem 3rem 0" }}>{detailOrQuote}</p>
+        </div>
       </div>
     </section>
   );

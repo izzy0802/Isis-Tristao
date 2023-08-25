@@ -26,11 +26,16 @@ import "./styles.css";
 const siteProps = {
   name: "Bem vindo.",
   title: (
-    <div>
-      Meu nome é Isis, atualmente desenvolvo soluções com as ferramentas da Microsoft!
-      <span className="ms-Icon ms-Icon--PowerAppsLogo _1CSRiMDZ6DRa3c1tIMDD3x ms-svg-Icon" style={{ display: "inline-block" }}> </span>
+    <div
+      style={{
+        width: "878px",
+        height: "195px",
+        textAlign: "center",
+      }}
+    >
+      Criando soluções
       <br />
-      Estou me especializando na área de Data Science e Machine Learning.
+      e experiências marcantes.
     </div>
   ),
   email: "alex@example.com",
@@ -47,7 +52,7 @@ const secondaryColor = "#D2F1E4";
 
 const App = () => {
   return (
-    <div id="main" style={{ backgroundColor: "#1d1d20" }}>
+    <div id="main" style={{ backgroundColor: "#ffff" }}>
       <Header />
       <Home name={siteProps.name} title={siteProps.title} />
       <About />
