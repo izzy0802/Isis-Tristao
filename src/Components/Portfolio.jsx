@@ -104,13 +104,12 @@ const Portfolio = () => {
         <button
           style={{
             width: "287px",
-            height: "82px",
+            height: "62px",
             borderRadius: "40px",
             backgroundColor: "black",
             color: "white",
             fontSize: "19px",
             fontWeight: "500",
-            lineHeight: "75px",
           }}
         >
           VER MAIS

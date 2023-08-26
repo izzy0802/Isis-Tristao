@@ -126,7 +126,7 @@ const Contact = () => {
             onClick={() => handleSubmit(onSubmit)()}
             style={{
               width: "287px",
-              height: "82px",
+              height: "62px",
               borderRadius: "40px",
               backgroundColor: "black",
               color: "white",

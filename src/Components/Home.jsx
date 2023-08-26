@@ -37,6 +37,7 @@ const Home = ({ title }) => {
             height: "100%",
             width: "100%",
             borderRadius: "100%",
+            objectFit: "cover",
           }}
         />
       </div>
@@ -46,7 +47,7 @@ const Home = ({ title }) => {
             fontSize: "26px",
           }}
         >
-          Olá, eu me chamo Isis 🤘
+          Olá, eu me chamo Isis 👋
         </h2>
       </div>
       <div className="flex-box container-box">
@@ -179,13 +180,12 @@ const Home = ({ title }) => {
         <button
           style={{
             width: "287px",
-            height: "82px",
+            height: "62px",
             borderRadius: "40px",
             backgroundColor: "black",
             color: "white",
             fontSize: "19px",
             fontWeight: "500",
-            lineHeight: "75px",
           }}
         >
           FALE COMIGO!

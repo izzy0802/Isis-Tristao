@@ -24,7 +24,7 @@ const Header = () => {
       <div
         style={{
           display: "flex",
-          justifyContent: "end",
+          justifyContent: "center",
           gap: "2rem",
           background: "#FFFFFF",
           width: "40%",

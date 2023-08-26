@@ -15,6 +15,12 @@ import PowerPlataform from "../images/PowerPlatform_scalable.svg";
 import Dataverse from "../images/Dataverse_scalable.svg";
 import DataWarehouse from "../images/synapse-data-warehouse-icon.png";
 import DataLake from "../images/onelake-icon.png";
+import Docker from "../images/docker-svgrepo-com.svg";
+import javascript from "../images/java-script.png";
+import AzueSynapse from "../images/Azure-Synapse-Analytics.svg";
+import DevOps from "../images/DevOps.svg";
+import csharp from "../images/c-sharp.svg";
+import airflow from "../images/airflow.svg";
 
 /**
  * About background image
@@ -32,7 +38,7 @@ import DataLake from "../images/onelake-icon.png";
  */
 const description = (
   <>
-    E se não estiver listado eu aprendo <br /> incrivelmente rápido, então <br /> não se preocupe.😉
+    E se não estiver listado eu aprendo <br /> incrivelmente rápido. 😉
   </>
 );
 
@@ -56,6 +62,12 @@ const imageUrls = [
   Dataverse,
   DataWarehouse,
   DataLake,
+  Docker,
+  javascript,
+  AzueSynapse,
+  DevOps,
+  csharp,
+  airflow,
 ];
 
 const About = () => {
@@ -111,7 +123,7 @@ const About = () => {
             flexDirection: "column",
           }}
         >
-          {[...Array(3)].map((_, rowIndex) => (
+          {[...Array(5)].map((_, rowIndex) => (
             <div
               key={rowIndex}
               style={{
@@ -128,7 +140,7 @@ const About = () => {
                     backgroundColor: "#EAF9FA",
                     backgroundImage: `url(${imageUrls[rowIndex * 3 + colIndex]})`,
                     backgroundSize: "cover",
-                    marginRight: "20px", // Adicione margem à direita para separar as colunas
+                    marginRight: "30px", // Adicione margem à direita para separar as colunas
                   }}
                 ></div>
               ))}
